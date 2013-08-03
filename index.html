@@ -1,0 +1,67 @@
+<!doctype html>  
+<html>
+  <head>
+    <title>Codeschool Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >    
+    <meta name="apple-touch-fullscreen" content="yes" >
+    <meta name="apple-mobile-web-app-capable" content="yes" > 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <aside>
+      <input id="input" value="andersjsdev">
+      <button id="fetch">Get my report!</button>
+    </aside>
+    <div id="report"></div>
+    <script src="mustache.js"></script>
+    <script src="app.js"></script>
+    <script type="text/html" id="user_template">  
+      <section>
+        <h2>{{username}}</h2>
+        <img src="{{avatar}}" id="avatar">
+        <p>{{{total_score}}}</p>
+      </section>
+    </script>
+    <script type="text/html" id="badges_template">
+      <section>
+        <h2>Badges</h2>
+        <ul>
+        {{#.}}
+          <li>
+            <a href="{{course_url}}" title="{{name}}">
+              <img src="{{badge}}">
+            </a>
+          </li>
+        {{/.}}
+        </ul>
+      </section>
+    </script>
+    <script type="text/html" id="courses_template">
+      <section>
+        <h2>Completed Courses</h2>
+        <ul>
+        {{#completed}}
+          <li>
+            <a href="{{url}}" title="{{title}}">
+              <img src="{{badge}}">
+            </a>
+          </li>
+        {{/completed}}
+        </ul>
+      </section>
+      <section>
+        <h2>In Progress Courses</h2>
+        <ul>
+        {{#in_progress}}
+          <li>
+            <a href="{{url}}" title="{{title}}">
+              <img src="{{badge}}">
+            </a>
+          </li>
+        {{/in_progress}}
+        </ul>
+      </section>
+    </script>
+  </body>
+</html>
