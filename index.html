@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <aside>
-      <input id="input" value="andersjsdev">
-      <button id="fetch">Get my report!</button>
-    </aside>
-    <div id="report"></div>
+    <p id="flash">An Error Occurred!</p>
+    <article>
+      <aside>
+        <p>Just enter your codeschool username below!</p>
+        <input id="input" placeholder="andersjsdev">
+        <button id="fetch">Get my report!</button>
+      </aside>
+      <div id="report"></div>
+    </article>
     <script src="mustache.js"></script>
     <script src="app.js"></script>
     <script type="text/html" id="user_template">  

@@ -28,7 +28,7 @@ h2{
    text-shadow:1px 1px 0 white;
    text-align: center;
 }
-body{
+article{
 	max-width:1100px;
 	margin: 0 auto;
 	padding:24px;
@@ -82,7 +82,24 @@ button:hover{
 button:active{
 	box-shadow: 0 0 0 #ccc;
 }
-
+aside p{
+	font-size:24px;
+	font-weight:normal;
+	text-shadow:1px 1px 1px darkgoldenrod;
+	line-height: 18px;
+	color:white;
+	margin-right:16px;
+	margin-bottom:16px;
+}
+p#flash{
+	font-size:16px;
+	padding:8px;
+	border-bottom:3px solid #633;
+	border-top:0;
+	background:#c66;
+	color:white;
+	display:none;
+}
 ul{
 	font-size:0;
 	margin:0 -16px;
